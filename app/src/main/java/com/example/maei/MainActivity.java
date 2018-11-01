@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity
     public static final String TAG = "MainActivity";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -45,6 +46,22 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Button button = this.findViewById(R.id.buttonLogin);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                EditText editTextName = findViewById(R.id.editTextName);
+                String name = editTextName.getText().toString();
+                EditText editTextPassword = findViewById(R.id.editTextPassword);
+                String password = editTextPassword.getText().toString();
+
+                Log.i(TAG, "Logging in with " + name + " and " + password);
+                Intent intent = new Intent(MainActivity.this, PostLogin.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -104,6 +121,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /*
     public void onLoginSubmit(View view) {
         EditText editTextName = findViewById(R.id.editTextName);
         String name = editTextName.getText().toString();
@@ -116,4 +134,5 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, PostLogin.class);
         startActivity(intent);
     }
+    */
 }

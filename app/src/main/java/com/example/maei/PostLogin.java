@@ -22,12 +22,4 @@ public class PostLogin extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_login);
     }
-
-    /**
-     * @return the last know best location
-     */
-    private Location getLastBestLocation() {
-        LocationManager locationManager = Context.getSystemService(LocationManager.class);
-        
-    }
 }
