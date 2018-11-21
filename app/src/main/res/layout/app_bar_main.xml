@@ -63,7 +63,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonToPostLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -83,6 +83,35 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btnToLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="149dp"
+            android:layout_marginLeft="149dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="122dp"
+            android:layout_marginRight="122dp"
+            android:text="To Location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonToPostLogin" />
+
+        <Button
+            android:id="@+id/btnToWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="149dp"
+            android:layout_marginLeft="149dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginRight="124dp"
+            android:text="To Weather"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnToLocation" />
 
     </android.support.constraint.ConstraintLayout>
 
