@@ -9,4 +9,6 @@
     <string name="title_activity_post_login">PostLogin</string>
     <string name="title_activity_location">LocationActivity</string>
     <string name="title_activity_weather">Weather</string>
+
+    <string name="open_weather_maps_app_id">44c4758382a84c1317b5d1168c8a1576</string>
 </resources>
