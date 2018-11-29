@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
                 String password = editTextPassword.getText().toString();
 
                 Log.i(TAG, "Logging in with " + name + " and " + password);
-                Intent intent = new Intent(MainActivity.this, PostLogin.class);
+                Intent intent = new Intent(MainActivity.this, AdapterLearning.class);
                 startActivity(intent);
             }
         });
